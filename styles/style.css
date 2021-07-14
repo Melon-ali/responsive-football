@@ -7,16 +7,16 @@
 /********************
     Common Styles 
 *********************/
-body{
+body {
     font-family: 'Poppins', sans-serif;
     background-color: #FFFFFF;
     margin: 0;
 }
-.container{
+.container {
     width: 1050px;
     margin-top: 30px;
 }
-main{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,15 +25,15 @@ main{
 /*****************
     Header Area 
 *****8************/
-header{
+header {
     background-color: #2D25A0;
 }
-.header-area{
+.header-area {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 60px;
 }
-.header-title{
+.header-title {
     margin-left: 100px;
 }
 .live-button {
@@ -44,78 +44,80 @@ header{
     color: #FFFFFF;
     transition: all;
 }
-.live-button:hover{
+.live-button:hover {
     color: #2D25A0;
     background-color: #FFFFFF;
     font-size: 20px;
 }
-.header-title h1{
+.header-title h1 {
     font-size: 64px;
     color: #FFFFFF;
 }
-.header-banner img{
+.header-banner img {
     width: 556px;
     height: 438px;
+    transition: 1s;
+}
+.header-banner img:hover {
+    transform: scale(1.3);
 }
 /***************************
     Football Blogs Styles 
 ****************************/
-.blogs{
+.blogs {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 30px;
     margin-top: 40px;
 }
-.blog{
+.blog {
     width: 330px;
     padding: 15px;
     box-shadow: 5px 5px 80px 5px rgb(197, 195, 195);
     margin-right: 30px;
 }
-.blog img{
+.blog img {
     width: 100%;
     height: 256px;
 }
 .blog .player-name{
     font-size: 28px;
 }
-.blog p{
+.blog p {
     font-size: 16px;
     color: #6C6C6C;
 }
 /************************
     Footballer Styles
  ************************/
- .footballer{
+ .footballers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px;
+ }
+ .footballer {
     width: 330px;
     padding: 15px;
     box-shadow: 5px 5px 80px 5px rgb(197, 195, 195);
     margin-right: 30px;
  }
- .footballer img{
+ .footballer img {
     width: 100%;
     height: 256px;
- }
- .dybala-ozil-icardi, 
- .maria-mbappe-salah,
- .kane-bruyne-coutinho{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-row-gap: 30px;
  }
  /******************
     Footer styles 
 ********************/
-.watch-more{
+.watch-more {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-top: 50px;
 }
-.watch-now h2{
+.watch-now h2 {
     font-size: 48px;
     margin: 0;
 }
-.watch-now a{
+.watch-now a {
     font-size: 16px;
     text-decoration: none;
     background-color: #E02C6D;
@@ -123,7 +125,7 @@ header{
     padding: 10px 24px;
     margin-top: 50px;
 }
-.watch-now a:hover{
+.watch-now a:hover {
     font-size: 20px;
     background-image: linear-gradient(orange, tomato);
     color: #E02C6D;
@@ -131,20 +133,59 @@ header{
 /******************
     Footer Styles 
 *******************/
-footer{
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 40px;
 }
-.logo img{
+.logo img {
     width: 485px;
     padding: 20px;
 }
-.follows i{
+.follows i {
     color: gray;
     background-color: #E7E7E8;
     margin-right: 10px;
     padding: 6px;
     border-radius: 50%;
+}
+/*********************
+    Media Queries 
+**********************/
+
+/******** Mobile Devices *********/
+@media only screen and (max-width: 688px) {
+    header {
+        width: 140%;
+    }
+    .container {
+        width: 100%;
+    }
+    .header-area, 
+    .blogs, 
+    .footballers,
+    .watch-more { 
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .header-banner {
+        margin-top: 50px;
+    }
+}
+/********* Tablet Devices *********/
+@media only screen and (min-width: 688px) and (max-width: 998px) {
+    .container {
+        width: 100%;
+    }
+    .header-area, 
+    .blogs, 
+    .footballers {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    ..watch-more {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .header-banner {
+        margin-top: 50px;
+    }
 }
